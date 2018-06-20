@@ -6,6 +6,7 @@
 #
 amqp==1.4.9               # via kombu
 analytics-python==1.1.0
+aniso8601==3.0.2          # via tincan
 anyjson==0.3.3            # via kombu
 argparse==1.4.0           # via caniusepython3
 asn1crypto==0.24.0        # via cryptography
@@ -93,11 +94,13 @@ slumber==0.7.1            # via edx-rest-api-client
 snowballstemmer==1.2.1    # via pydocstyle
 stevedore==1.28.0         # via edx-opaque-keys
 testfixtures==6.2.0
+tincan==0.0.5
 tox-battery==0.5
 tox==3.0.0
 tqdm==4.23.4              # via twine
 twine==1.11.0
 unicodecsv==0.14.1
 virtualenv==16.0.0        # via tox
+webencodings==0.5.1       # via html5lib
 wheel==0.31.1
 wrapt==1.10.11            # via astroid
