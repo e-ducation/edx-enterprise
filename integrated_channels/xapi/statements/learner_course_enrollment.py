@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+
 """
 X API Statement when learner enrolls in a course.
 """
+from __future__ import absolute_import, unicode_literals
 
 from tincan import Agent, Context, Verb, LanguageMap, Activity, ActivityDefinition
 

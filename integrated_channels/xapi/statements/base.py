@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+
 """
 Statements base for X-API.
 """
+from __future__ import absolute_import, unicode_literals
 
 from tincan.statement import Statement
 
@@ -15,4 +18,3 @@ class EnterpriseStatement(Statement):
         Initialize X-API statement.
         """
         super(EnterpriseStatement, self).__init__(*args, **kwargs)
-    

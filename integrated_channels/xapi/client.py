@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
+
 """
 X-API Client to send payload data.
 """
+from __future__ import absolute_import, unicode_literals
+
 import logging
 
 from tincan import RemoteLRS
