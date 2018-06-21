@@ -5,7 +5,7 @@ X API Statement when learner enrolls in a course.
 """
 from __future__ import absolute_import, unicode_literals
 
-from tincan import Agent, Context, Verb, LanguageMap, Activity, ActivityDefinition
+from tincan import Activity, ActivityDefinition, Agent, LanguageMap, Verb
 
 from integrated_channels.xapi.statements.base import EnterpriseStatement
 
@@ -15,7 +15,7 @@ class LearnerCourseEnrollmentStatement(EnterpriseStatement):
     X-API Statement to serialize data related to course registration.
     """
 
-    def __init__(self, user, course_overview, user_details, course_details, *args, **kwargs):
+    def __init__(self, user, course_overview, *args, **kwargs):
         """
         Initialize and populate statement with learner info and course info.
 
@@ -37,9 +37,9 @@ class LearnerCourseEnrollmentStatement(EnterpriseStatement):
         Get actor for course enrollment statement.
         """
         return Agent(
-                name=username,
-                mbox='mailto:{email}'.format(email=email),
-            )
+            name=username,
+            mbox='mailto:{email}'.format(email=email),
+        )
 
     def get_verb(self):
         """

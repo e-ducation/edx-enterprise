@@ -55,6 +55,9 @@ class XAPILRSConfiguration(TimeStampedModel):
 
     @property
     def authorization_header(self):
+        """
+        Authorization header for authenticating requests to LRS.
+        """
         return 'Basic {}'.format(
             base64.b64encode('{key}:{secret}'.format(key=self.key, secret=self.secret).encode()).decode()
         )

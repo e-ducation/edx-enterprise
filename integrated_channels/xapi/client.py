@@ -29,6 +29,9 @@ class EnterpriseXAPIClient(object):
 
     @property
     def lrs(self):
+        """
+        LRS client instance to be used for sending statements.
+        """
         return RemoteLRS(
             version=self.lrs_configuration.version,
             endpoint=self.lrs_configuration.endpoint,

@@ -6,7 +6,6 @@ Utility functions for X-API.
 
 from __future__ import absolute_import, unicode_literals
 
-from integrated_channels.xapi.models import XAPILRSConfiguration
 from integrated_channels.xapi.client import EnterpriseXAPIClient
 from integrated_channels.xapi.statements.learner_course_enrollment import LearnerCourseEnrollmentStatement
 
