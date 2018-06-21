@@ -24,16 +24,16 @@ class XAPILRSConfiguration(TimeStampedModel):
         EnterpriseCustomer,
         blank=False,
         null=False,
-        help_text=_("Enterprise Customer associated with the configuration."),
+        help_text=_('Enterprise Customer associated with the configuration.'),
     )
-    version = models.CharField(max_length=16, default='1.0.1', help_text=_("Version of X-API."))
+    version = models.CharField(max_length=16, default='1.0.1', help_text=_('Version of X-API.'))
     endpoint = models.URLField(help_text=_('URL of the LRS.'))
-    key = models.CharField(max_length=255, verbose_name="Client ID", help_text=_("Key of X-API LRS."))
-    secret = models.CharField(max_length=255, verbose_name="Client Secret", help_text=_("secret of X-API LRS."))
+    key = models.CharField(max_length=255, verbose_name="Client ID", help_text=_('Key of X-API LRS.'))
+    secret = models.CharField(max_length=255, verbose_name="Client Secret", help_text=_('secret of X-API LRS.'))
     active = models.BooleanField(
         blank=False,
         null=False,
-        help_text=_("Is this configuration active?"),
+        help_text=_('Is this configuration active?'),
     )
 
     class Meta:
@@ -43,7 +43,15 @@ class XAPILRSConfiguration(TimeStampedModel):
         """
         Return human-readable string representation.
         """
-        return "<XAPILRSConfiguration for Enterprise {enterprise_name}>".format(
+        return '<XAPILRSConfiguration for Enterprise {enterprise_name}>'.format(
+            enterprise_name=self.enterprise_customer.name
+        )
+
+    def __unicode__(self):
+        """
+        Return human-readable unicode representation.
+        """
+        return u'<XAPILRSConfiguration for Enterprise {enterprise_name}>'.format(
             enterprise_name=self.enterprise_customer.name
         )
 
