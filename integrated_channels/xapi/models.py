@@ -8,6 +8,7 @@ from __future__ import absolute_import, unicode_literals
 import base64
 
 from django.db import models
+from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 
 from model_utils.models import TimeStampedModel
@@ -15,6 +16,7 @@ from model_utils.models import TimeStampedModel
 from enterprise.models import EnterpriseCustomer
 
 
+@python_2_unicode_compatible
 class XAPILRSConfiguration(TimeStampedModel):
     """
     X-API LRS configurations.
@@ -44,14 +46,6 @@ class XAPILRSConfiguration(TimeStampedModel):
         Return human-readable string representation.
         """
         return '<XAPILRSConfiguration for Enterprise {enterprise_name}>'.format(
-            enterprise_name=self.enterprise_customer.name
-        )
-
-    def __unicode__(self):
-        """
-        Return human-readable unicode representation.
-        """
-        return u'<XAPILRSConfiguration for Enterprise {enterprise_name}>'.format(
             enterprise_name=self.enterprise_customer.name
         )
 
