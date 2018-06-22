@@ -7,7 +7,9 @@ from __future__ import absolute_import, unicode_literals
 
 import logging
 
-from tincan import RemoteLRS
+from tincan.remote_lrs import RemoteLRS
+
+from integrated_channels.exceptions import ClientError
 
 LOGGER = logging.getLogger(__name__)
 
@@ -44,8 +46,11 @@ class EnterpriseXAPIClient(object):
 
         Arguments:
             statement (EnterpriseStatement): X-API Statement to send to the LRS.
+
+        Raises:
+            ClientError: If X-API statement fails to save.
         """
         response = self.lrs.save_statement(statement)
 
         if not response:
-            LOGGER.error("Statement failed to save.")
+            raise ClientError('EnterpriseXAPIClient request failed.')

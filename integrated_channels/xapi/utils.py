@@ -10,7 +10,7 @@ from integrated_channels.xapi.client import EnterpriseXAPIClient
 from integrated_channels.xapi.statements.learner_course_enrollment import LearnerCourseEnrollmentStatement
 
 
-def send_xapi_statement_course_enrollment(lrs_configuration, course_enrollment):
+def send_course_enrollment_statement(lrs_configuration, course_enrollment):
     """
     Send X-API statement for course enrollment.
 
