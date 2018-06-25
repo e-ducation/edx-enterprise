@@ -5,7 +5,7 @@ X API Statement when learner enrolls in a course.
 """
 from __future__ import absolute_import, unicode_literals
 
-from tincan import Activity, ActivityDefinition, Agent, LanguageMap, Verb
+from tincan import Activity, ActivityDefinition, Agent, Context, Extensions, LanguageMap, Verb
 
 from integrated_channels.xapi.statements.base import EnterpriseStatement
 
@@ -15,7 +15,7 @@ class LearnerCourseEnrollmentStatement(EnterpriseStatement):
     X-API Statement to serialize data related to course registration.
     """
 
-    def __init__(self, user, course_overview, *args, **kwargs):
+    def __init__(self, user, course_overview, user_details, course_details, *args, **kwargs):
         """
         Initialize and populate statement with learner info and course info.
 
@@ -29,6 +29,7 @@ class LearnerCourseEnrollmentStatement(EnterpriseStatement):
             actor=self.get_actor(user.username, user.email),
             verb=self.get_verb(),
             object=self.get_object(course_overview.display_name, course_overview.short_description),
+            context=self.get_context(user_details, course_details)
         )
         super(LearnerCourseEnrollmentStatement, self).__init__(*args, **kwargs)
 
@@ -60,4 +61,17 @@ class LearnerCourseEnrollmentStatement(EnterpriseStatement):
                 name=LanguageMap({'en-US': name}),
                 description=LanguageMap({'en-US': description}),
             ),
+        )
+
+    def get_context(self, user_details, course_details):
+        """
+        Get verb for course enrollment statement.
+        """
+        return Context(
+            extensions=Extensions(
+                {
+                    'http://id.tincanapi.com/extension/user-details': user_details,
+                    'http://id.tincanapi.com/extension/course-details': course_details,
+                },
+            )
         )
