@@ -39,6 +39,7 @@ edx-django-oauth2-provider==1.1.4
 edx-drf-extensions==1.2.3
 edx-opaque-keys==0.4.0
 edx-rest-api-client==1.7.1
+enum34==1.1.6             # via cryptography
 event-tracking==0.2.4
 factory-boy==2.11.1
 faker==0.8.16             # via factory-boy
@@ -82,4 +83,3 @@ testfixtures==6.2.0
 text-unidecode==1.2       # via faker
 tincan==0.0.5
 unicodecsv==0.14.1
-webencodings==0.5.1       # via html5lib

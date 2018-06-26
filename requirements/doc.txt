@@ -7,6 +7,7 @@
 alabaster==0.7.11         # via sphinx
 amqp==1.4.9               # via kombu
 analytics-python==1.1.0
+aniso8601==3.0.2          # via tincan
 anyjson==0.3.3            # via kombu
 asn1crypto==0.24.0        # via cryptography
 babel==2.6.0              # via sphinx
@@ -77,5 +78,6 @@ sphinxcontrib-napoleon==0.6.1
 sphinxcontrib-websupport==1.1.0  # via sphinx
 stevedore==1.28.0         # via doc8, edx-opaque-keys
 testfixtures==6.2.0
+tincan==0.0.5
 typing==3.6.4             # via sphinx
 unicodecsv==0.14.1

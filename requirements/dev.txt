@@ -19,7 +19,7 @@ celery==3.1.18
 cffi==1.11.5              # via cryptography
 click-log==0.1.8          # via edx-lint
 click==6.7                # via click-log, edx-lint, pip-tools
-configparser==3.5.0       # via pylint
+configparser==3.5.0       # via pydocstyle, pylint
 cryptography==1.9
 defusedxml==0.5.0         # via djangorestframework-xml
 diff-cover==0.9.8
@@ -101,6 +101,5 @@ tqdm==4.23.4              # via twine
 twine==1.11.0
 unicodecsv==0.14.1
 virtualenv==16.0.0        # via tox
-webencodings==0.5.1       # via html5lib
 wheel==0.31.1
 wrapt==1.10.11            # via astroid

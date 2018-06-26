@@ -6,6 +6,7 @@
 #
 amqp==1.4.9               # via kombu
 analytics-python==1.1.0
+aniso8601==3.0.2          # via tincan
 anyjson==0.3.3            # via kombu
 asn1crypto==0.24.0        # via cryptography
 atomicwrites==1.1.5       # via pytest
@@ -80,4 +81,5 @@ slumber==0.7.1            # via edx-rest-api-client
 stevedore==1.28.0         # via edx-opaque-keys
 testfixtures==6.2.0
 text-unidecode==1.2       # via faker
+tincan==0.0.5
 unicodecsv==0.14.1
