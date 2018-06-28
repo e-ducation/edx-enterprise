@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Statements base for X-API.
+Statements base for xAPI.
 """
 from __future__ import absolute_import, unicode_literals
 

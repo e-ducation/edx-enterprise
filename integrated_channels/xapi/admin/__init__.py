@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Django admin integration for configuring sap_success_factors app to communicate with SAP SuccessFactors systems.
+Django admin integration for xAPI.
 """
 from __future__ import absolute_import, unicode_literals
 
 from django.contrib import admin
 
-from integrated_channels.xapi.models import (
-    XAPILRSConfiguration
-)
+from integrated_channels.xapi.models import XAPILRSConfiguration
 
 
 @admin.register(XAPILRSConfiguration)
 class XAPILRSConfigurationAdmin(admin.ModelAdmin):
     """
-    Django admin model for SAPSuccessFactorsGlobalConfiguration.
+    Django admin model for XAPILRSConfiguration.
     """
     fields = (
         'enterprise_customer',

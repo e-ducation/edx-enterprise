@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Test for X-API utility functions.
+Test for xAPI utility functions.
 """
 
 from __future__ import absolute_import, unicode_literals
@@ -19,7 +19,7 @@ from test_utils import factories
 @mark.django_db
 class TestUtils(unittest.TestCase):
     """
-    Tests for the X-API Utility Functions.
+    Tests for the xAPI Utility Functions.
     """
 
     def setUp(self):
@@ -37,7 +37,7 @@ class TestUtils(unittest.TestCase):
     @mock.patch('integrated_channels.xapi.client.RemoteLRS', mock.MagicMock())
     def test_send_course_enrollment_statement(self):
         """
-        Verify that send_course_enrollment_statement sends X-API statement to LRS.
+        Verify that send_course_enrollment_statement sends XAPI statement to LRS.
         """
         send_course_enrollment_statement(self.x_api_lrs_config, self.course_enrollment)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-X-API Client to send payload data.
+xAPI Client to send payload data.
 """
 from __future__ import absolute_import, unicode_literals
 
@@ -16,17 +16,16 @@ LOGGER = logging.getLogger(__name__)
 
 class EnterpriseXAPIClient(object):
     """
-    X-API to send payload data and handle responses.
+    xAPI to send payload data and handle responses.
     """
 
     def __init__(self, lrs_configuration):
         """
-        Initialize X-API client.
+        Initialize xAPI client.
 
         Arguments:
-             lrs_configuration (XAPILRSConfiguration): Configuration object for X-API LRS.
+             lrs_configuration (XAPILRSConfiguration): Configuration object for xAPI LRS.
         """
-
         self.lrs_configuration = lrs_configuration
 
     @property
@@ -42,13 +41,13 @@ class EnterpriseXAPIClient(object):
 
     def save_statement(self, statement):
         """
-        Save X-API statement.
+        Save xAPI statement.
 
         Arguments:
-            statement (EnterpriseStatement): X-API Statement to send to the LRS.
+            statement (EnterpriseStatement): xAPI Statement to send to the LRS.
 
         Raises:
-            ClientError: If X-API statement fails to save.
+            ClientError: If xAPI statement fails to save.
         """
         response = self.lrs.save_statement(statement)
 

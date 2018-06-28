@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-X API Statement when learner completes a course.
+xAPI statement for course completion.
 """
 from __future__ import absolute_import, unicode_literals
 
@@ -12,7 +12,7 @@ from integrated_channels.xapi.statements.base import EnterpriseStatement
 
 class LearnerCourseCompletionStatement(EnterpriseStatement):
     """
-    X-API Statement to serialize data related to course completion.
+    xAPI Statement to serialize data related to course completion.
     """
 
     def __init__(self, user, course_overview, user_details, course_details, course_grade, *args, **kwargs):
@@ -22,8 +22,8 @@ class LearnerCourseCompletionStatement(EnterpriseStatement):
         Arguments:
             user (User): Auth User object containing information about the learner enrolling in the course.
             course_overview (CourseOverview): course overview object containing course details.
-            user_details (dict): A dict object containing learner info we want to send in X-API statement payload.
-            course_details (dict): A dict object containing course info we want to send in X-API statement payload.
+            user_details (dict): A dict object containing learner info we want to send in xAPI statement payload.
+            course_details (dict): A dict object containing course info we want to send in xAPI statement payload.
             course_grade (CourseGrade): User grade in the course.
         """
         kwargs.update(

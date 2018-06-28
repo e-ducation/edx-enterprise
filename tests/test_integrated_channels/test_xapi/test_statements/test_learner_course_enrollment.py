@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Test for X-API Learner Course Enrollment Statements.
+Test for xAPI Learner Course Enrollment Statements.
 """
 
 from __future__ import absolute_import, unicode_literals

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Models for X-API.
+Models for xAPI.
 """
 from __future__ import absolute_import, unicode_literals
 
@@ -19,7 +19,7 @@ from enterprise.models import EnterpriseCustomer
 @python_2_unicode_compatible
 class XAPILRSConfiguration(TimeStampedModel):
     """
-    X-API LRS configurations.
+    xAPI LRS configurations.
     """
 
     enterprise_customer = models.OneToOneField(
@@ -28,10 +28,10 @@ class XAPILRSConfiguration(TimeStampedModel):
         null=False,
         help_text=_('Enterprise Customer associated with the configuration.'),
     )
-    version = models.CharField(max_length=16, default='1.0.1', help_text=_('Version of X-API.'))
+    version = models.CharField(max_length=16, default='1.0.1', help_text=_('Version of xAPI.'))
     endpoint = models.URLField(help_text=_('URL of the LRS.'))
-    key = models.CharField(max_length=255, verbose_name="Client ID", help_text=_('Key of X-API LRS.'))
-    secret = models.CharField(max_length=255, verbose_name="Client Secret", help_text=_('secret of X-API LRS.'))
+    key = models.CharField(max_length=255, verbose_name="Client ID", help_text=_('Key of xAPI LRS.'))
+    secret = models.CharField(max_length=255, verbose_name="Client Secret", help_text=_('secret of xAPI LRS.'))
     active = models.BooleanField(
         blank=False,
         null=False,

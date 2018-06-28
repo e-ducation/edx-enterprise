@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Test for X-API client.
+Test for xAPI client.
 """
 
 from __future__ import absolute_import, unicode_literals
@@ -29,7 +29,7 @@ class TestXAPILRSConfiguration(unittest.TestCase):
     @mock.patch('integrated_channels.xapi.client.RemoteLRS', mock.MagicMock())
     def test_save_statement(self):
         """
-        Verify that save_statement sends X-API statement to LRS.
+        Verify that save_statement sends xAPI statement to LRS.
         """
         # verify that request completes without an error.
         self.x_api_client.save_statement({})

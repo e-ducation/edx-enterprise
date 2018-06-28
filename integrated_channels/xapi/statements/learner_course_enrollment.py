@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-X API Statement when learner enrolls in a course.
+xAPI statement for learner course enrollment.
 """
 from __future__ import absolute_import, unicode_literals
 
@@ -12,7 +12,7 @@ from integrated_channels.xapi.statements.base import EnterpriseStatement
 
 class LearnerCourseEnrollmentStatement(EnterpriseStatement):
     """
-    X-API Statement to serialize data related to course registration.
+    xAPI statement to serialize data related to course registration.
     """
 
     def __init__(self, user, course_overview, user_details, course_details, *args, **kwargs):
@@ -22,8 +22,8 @@ class LearnerCourseEnrollmentStatement(EnterpriseStatement):
         Arguments:
             user (User): Auth User object containing information about the learner enrolling in the course.
             course_overview (CourseOverview): course overview object containing course details.
-            user_details (dict): A dict object containing learner info we want to send in X-API statement payload.
-            course_details (dict): A dict object containing course info we want to send in X-API statement payload.
+            user_details (dict): A dict object containing learner info we want to send in xAPI statement payload.
+            course_details (dict): A dict object containing course info we want to send in xAPI statement payload.
         """
         kwargs.update(
             actor=self.get_actor(user.username, user.email),

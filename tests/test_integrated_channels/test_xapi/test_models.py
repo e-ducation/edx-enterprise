@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Tests for the X-API models.
+Tests for the xAPI models.
 """
 
 from __future__ import absolute_import, unicode_literals

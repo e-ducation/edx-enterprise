@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Utility functions for X-API.
+Utility functions for xAPI.
 """
 
 from __future__ import absolute_import, unicode_literals
@@ -12,7 +12,7 @@ from integrated_channels.xapi.statements.learner_course_enrollment import Learne
 
 def send_course_enrollment_statement(lrs_configuration, course_enrollment):
     """
-    Send X-API statement for course enrollment.
+    Send xAPI statement for course enrollment.
 
     Arguments:
          lrs_configuration (XAPILRSConfiguration): XAPILRSConfiguration instance where to send statements.
